@@ -1,3 +1,19 @@
+# Build directory
+assets
+
+# Ghost
+ghost
+logs
+pids
+results
+
+# OS-specific files
+.DS_Store
+
+# Package manager files
+node_modules
+npm-debug.log
+
 # Sensitive files
 *.csv
 *.dat
@@ -9,17 +25,5 @@
 *.zip
 b-cov
 
-# Ghost
-logs
-pids
-results
-
-# Package manager files
-node_modules/
-npm-debug.log
-
-# Misc.
-.unlighthouse/
-
-# Build directory
-assets/
+# Unlighthouse
+.unlighthouse

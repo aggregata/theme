@@ -1,7 +1,7 @@
 {
     "name": "aggregata",
     "description": "A custom theme for aggregata.de",
-    "version": "0.1.0",
+    "version": "5.109.6",
     "type": "module",
     "engines": {
         "ghost": ">=5.0.0"
