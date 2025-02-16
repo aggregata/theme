@@ -49,9 +49,12 @@
     }
 
     vue-code,
-    vue-katex,
     vue-plot {
-        @apply relative my-8 block;
+        @apply relative my-8 block opacity-0 transition-opacity;
+
+        &[init] {
+            @apply opacity-100;
+        }
     }
 
     vue-code {

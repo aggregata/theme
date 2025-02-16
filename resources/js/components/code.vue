@@ -11,6 +11,8 @@ defineOptions({ inheritAttrs: false });
 onMounted(async () => {
     const { default: hljs } = await import('highlight.js');
     hljs.highlightElement(host);
+
+    host?.setAttribute('init', 'true');
 });
 
 const copy = async () => {
