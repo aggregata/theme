@@ -1,0 +1,30 @@
+.kg-toggle {
+    &-card {
+        @apply rounded-xl border p-6 shadow-none;
+        &-icon {
+            @apply ml-0 size-8 rounded-xl p-2 hover:bg-background-subtle focus:bg-background-subtle;
+
+            svg {
+                @apply size-4 shrink-0 text-foreground-subtle;
+            }
+        }
+    }
+    &-heading {
+        @apply items-center gap-3;
+        &-text {
+            font-size: theme('fontSize.md') !important;
+            line-height: theme('lineHeight.tight') !important;
+
+            strong {
+                @apply font-medium;
+            }
+        }
+    }
+    &-content {
+        p {
+            margin-top: theme('space.3') !important;
+            font-size: theme('fontSize.md') !important;
+            line-height: inherit !important;
+        }
+    }
+}

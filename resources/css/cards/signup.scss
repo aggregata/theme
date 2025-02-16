@@ -1,0 +1,25 @@
+.kg-signup-card {
+    @apply overflow-hidden rounded-xl;
+
+    picture {
+        @apply my-0 overflow-hidden rounded-xl;
+    }
+
+    &-fields {
+        @apply gap-1 rounded-full border bg-zinc-50 p-2 font-medium leading-8;
+    }
+    &-input {
+        @apply m-0 h-8 min-h-8 rounded-full bg-zinc-50 px-3 text-sm text-zinc-950;
+        outline: revert !important;
+    }
+    &-button {
+        @apply h-8 min-h-8 rounded-full px-3 font-medium;
+        outline: revert !important;
+
+        &-default {
+            @apply text-sm;
+        }
+        &-loading {
+        }
+    }
+}

@@ -1,0 +1,38 @@
+:root {
+  --amber-100: #fef3c7;
+  --amber-400: #fbbf24;
+  --amber-600: #d97706;
+  --amber-950: #451a03;
+
+  --emerald-100: #d1fae5;
+  --emerald-400: #34d399;
+  --emerald-600: #059669;
+  --emerald-950: #022c22;
+
+  --indigo-100: #e0e7ff;
+  --indigo-400: #818cf8;
+  --indigo-600: #4f46e5;
+  --indigo-950: #1e1b4b;
+
+  --rose-100: #ffe4e6;
+  --rose-400: #fb7185;
+  --rose-600: #e11d48;
+  --rose-950: #4c0519;
+
+  --sky-100: #e0f2fe;
+  --sky-400: #38bdf8;
+  --sky-600: #0284c7;
+  --sky-950: #082f49;
+
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+}

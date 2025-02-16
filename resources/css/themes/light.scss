@@ -1,0 +1,44 @@
+@mixin theme {
+    --background: var(--zinc-100);
+    --background-subtle: var(--zinc-50);
+
+    --foreground: var(--zinc-950);
+    --foreground-subtle: var(--zinc-600);
+
+    --neutral: var(--zinc-950);
+    --neutral-subtle: var(--zinc-200);
+
+    --brand-bold: var(--indigo-950);
+    --brand: var(--indigo-600);
+    --brand-subtle: var(--indigo-100);
+
+    --informative-bold: var(--sky-950);
+    --informative: var(--sky-600);
+    --informative-subtle: var(--sky-100);
+
+    --successful-bold: var(--emerald-950);
+    --successful: var(--emerald-600);
+    --successful-subtle: var(--emerald-100);
+
+    --cautionary-bold: var(--amber-950);
+    --cautionary: var(--amber-600);
+    --cautionary-subtle: var(--amber-100);
+
+    --destructive-bold: var(--rose-950);
+    --destructive: var(--rose-600);
+    --destructive-subtle: var(--rose-100);
+
+    --border: var(--zinc-200);
+
+    --input: var(--border);
+
+    --ring: var(--brand-bold);
+}
+
+:root {
+    @include theme;
+}
+
+.light-mode {
+    @include theme;
+}

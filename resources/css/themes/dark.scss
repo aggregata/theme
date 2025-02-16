@@ -1,0 +1,48 @@
+@mixin theme {
+    @media (prefers-color-scheme: dark) {
+        --background: var(--zinc-950);
+        --background-subtle: var(--zinc-900);
+
+        --foreground: var(--zinc-50);
+        --foreground-subtle: var(--zinc-400);
+
+        --neutral: var(--zinc-50);
+        --neutral-subtle: var(--zinc-800);
+
+        --brand-bold: var(--indigo-100);
+        --brand: var(--indigo-400);
+        --brand-subtle: var(--indigo-950);
+
+        --informative-bold: var(--sky-100);
+        --informative: var(--sky-400);
+        --informative-subtle: var(--sky-950);
+
+        --successful-bold: var(--emerald-100);
+        --successful: var(--emerald-400);
+        --successful-subtle: var(--emerald-950);
+
+        --cautionary-bold: var(--amber-100);
+        --cautionary: var(--amber-400);
+        --cautionary-subtle: var(--amber-950);
+
+        --destructive-bold: var(--rose-100);
+        --destructive: var(--rose-400);
+        --destructive-subtle: var(--rose-950);
+
+        --border: var(--zinc-800);
+
+        --input: var(--border);
+
+        --ring: var(--brand-bold);
+    }
+}
+
+:root {
+    @media (prefers-color-scheme: dark) {
+        @include theme;
+    }
+}
+
+.dark-mode {
+    @include theme;
+}

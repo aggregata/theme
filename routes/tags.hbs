@@ -1,0 +1,33 @@
+{{!< ../default}}
+
+<div class='mx-auto w-full max-w-[48rem] px-6 py-18'>
+    <header class='w-full text-balance text-center'>
+        <div class='rounded-xl bg-gradient-to-b from-background-subtle to-transparent px-6 py-18'>
+            <h1 class='text-h4 font-medium leading-tight text-foreground'>
+                {{t 'Tags'}}
+            </h1>
+        </div>
+    </header>
+
+    <main class='mt-18'>
+        <section class='flex flex-wrap justify-center gap-1'>
+            {{#get 'tags' include='count.posts'}}
+                {{#foreach tags}}
+                    <a
+                        class='block rounded-xl border p-3 transition-colors hover:bg-background-subtle focus:bg-background-subtle'
+                        href='{{url}}'
+                        title='{{description}}'
+                    >
+                        <div class='flex items-center gap-3 font-medium leading-6'>
+                            <h2 class='text-foreground'>{{name}}</h2>
+                            <span
+                                class='ml-auto block min-w-6 rounded-md bg-background-subtle px-2 text-center text-sm'
+                            >
+                                {{plural count.posts empty='Articles' singular='% Article' plural='% Articles'}}</span>
+                        </div>
+                    </a>
+                {{/foreach}}
+            {{/get}}
+        </section>
+    </main>
+</div>

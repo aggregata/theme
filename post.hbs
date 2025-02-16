@@ -1,0 +1,79 @@
+{{!< default}}
+
+{{#post}}
+    <div class="grow grid grid-cols-post items-start w-full max-w-[90rem] mx-auto py-18">
+        <aside class="hidden lg:block sticky top-0 -mt-12 py-12 px-6 max-h-screen overflow-y-auto no-scrollbar">
+            <div class="space-y-6">
+                {{#get 'posts' include="tags,authors" limit="3" filter="id:-{{id}}+tag:[{{primary_tag.slug}}]"}}
+                    {{#foreach posts}}
+                        <article class="space-y-3" style="view-transition-name: post-{{ slug }}">
+                            <a href="{{url}}">
+                                {{#if feature_image}}
+                                    <img
+                                        class="mb-3 border w-full aspect-video rounded-xl"
+                                        srcset="{{img_url feature_image format='avif' size='xs' }} 240w"
+                                        src=" {{img_url feature_image format='avif' size='xs'}}"
+                                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                                        loading="lazy"
+                                    >
+                                {{/if}}
+                                <h2 class="font-medium text-foreground">
+                                    {{title}}
+                                </h2>
+                            </a>
+                            <div class="flex flex-wrap gap-1 leading-6 text-sm font-medium">
+                                {{> author}}
+                                <span class="px-2">{{date}}</span>
+                            </div>
+                        </article>
+                    {{/foreach}}
+                {{/get}}
+            </div>
+        </aside>
+
+        <div class="min-w-0 col-span-3 md:col-span-2 lg:col-span-1 lg:col-start-2 px-6">
+            <header class="max-w-[45rem] mx-auto" style="view-transition-name: post-{{ slug }}">
+                {{#if feature_image}}
+                    <img class="mb-6 aspect-video w-full rounded-xl border" srcset="
+            {{img_url feature_image format='avif' size='xs' }} 240w, {{img_url feature_image format='avif' size='sm' }} 480w, {{img_url
+                        feature_image format='avif' size='md' }} 720w" src="{{img_url feature_image format='avif' size='md'}}"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                {{/if}}
+
+                <div class="py-18 px-6 text-balance text-center bg-gradient-to-b from-background-subtle to-transparent rounded-xl">
+                    <h1 class="text-h4 font-medium text-foreground leading-tight">
+                        {{title}}
+                    </h1>
+                    <h2 class="mt-6">{{excerpt}}</h2>
+                    <div class="mt-6 flex justify-center flex-wrap gap-1 leading-6 text-sm font-medium">
+                        {{#if @first}}
+                            <span
+                                class="flex flex-wrap gap-1 items-center px-2 rounded-md text-background bg-foreground">
+                                {{> icons/sparks }}
+                                {{t 'New'}}
+                            </span>
+                        {{/if}}
+                        {{> author}}
+                        {{#primary_tag}}
+                            <a class="bg-background-subtle px-2 rounded-md hover:bg-border focus:bg-border transition-colors"
+                                href="{{url}}">{{name}}</a>
+                        {{/primary_tag}}
+                        <span class="px-2">{{date}}</span>
+                        <span class="px-2">{{reading_time}}</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="mt-18">
+                <section class="col-span-2 rich-text">
+                    {{content}}
+                </section>
+            </main>
+        </div>
+        <aside
+            class="px-6 col-start-3 hidden md:block sticky top-0 -mt-12 py-12 max-h-screen overflow-y-auto no-scrollbar">
+            <vue-contents></vue-contents>
+        </aside>
+    </div>
+    <script src="{{ asset 'post.js' }}" type="module"></script>
+{{/post}}

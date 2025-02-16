@@ -1,0 +1,24 @@
+[
+    {
+        "type": "bar",
+        "x": [
+            "Batch Size",
+            "Memory Buffer Length",
+            "Epsilon Parameter",
+            "Learning Rate Exponent",
+            "Gamma Parameter",
+            "Epsilon Decay Parameter",
+            "Number of Layers",
+            "units_0"
+        ],
+        "y": [
+            0.3028473444558706, 0.23117698152255975, 0.12571734885310112, 0.09469078277021495, 0.09374094160242523,
+            0.05915532983113473, 0.05852657907047703, 0.034144691894216685
+        ],
+        "name": "Hyperparameter Importances",
+        "line": {
+            "width": 1
+        },
+        "marker": { "color": "#ef4444" }
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "type": "bar",
+        "x": ["Anger", "Disgust", "Fear", "Joy", "Neutral", "Sadness", "Surprise"],
+        "y": [0.233, 0.1152, 0.0021, 0.0037, 0.5561, 0.0069, 0.0832],
+        "name": "Values of the Emotions",
+        "line": {
+            "width": 1
+        }
+    }
+]

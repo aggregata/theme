@@ -1,0 +1,21 @@
+.kg-header {
+    &-card {
+        @apply relative overflow-hidden rounded-xl border;
+
+        picture {
+            @apply my-0 h-full;
+        }
+        &-heading {
+            @apply text-inherit;
+        }
+        &-button {
+            font-family: inherit !important;
+            font-size: theme('fontSize.sm') !important;
+            font-weight: theme('fontWeight.medium') !important;
+            height: 3rem !important;
+            min-height: 3rem !important ;
+            padding-inline: theme('spacing.6') !important;
+            border-radius: theme('borderRadius.full') !important;
+        }
+    }
+}

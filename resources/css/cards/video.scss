@@ -1,0 +1,59 @@
+.kg-video {
+    &-card {
+        @apply overflow-hidden rounded-xl bg-background-subtle;
+    }
+    &-container {
+        video {
+            @apply my-0 aspect-video;
+        }
+    }
+    &-overlay {
+    }
+    &-large-play-icon {
+        @apply size-18 bg-background/50;
+        svg {
+            @apply size-6 fill-foreground;
+        }
+    }
+    &-player {
+        @apply gap-1 p-6;
+
+        &-container {
+            @apply bg-gradient-to-b from-transparent to-zinc-950/50;
+        }
+    }
+    &-play-icon,
+    &-pause-icon {
+        @apply rounded-xl p-2.5;
+
+        svg {
+            @apply size-3 fill-zinc-100;
+        }
+    }
+    &-current-time,
+    &-duration {
+        @apply px-2 text-sm;
+    }
+    &-current-time {
+        @apply text-zinc-100;
+    }
+    &-duration {
+        @apply text-zinc-400;
+    }
+    &-playback-rate {
+        @apply min-w-8 justify-center rounded-xl px-2 text-sm leading-8 text-zinc-100;
+    }
+    &-unmute-icon,
+    &-mute-icon {
+        @apply rounded-xl p-2;
+        svg {
+            @apply size-4 fill-zinc-100;
+        }
+    }
+    &-seek-slider,
+    &-volume-slider {
+        &::before {
+            background: theme('colors.zinc.400');
+        }
+    }
+}

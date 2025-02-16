@@ -1,0 +1,11 @@
+[
+    {
+        "type": "bar",
+        "x": ["Wut", "Ekel", "Angst", "Freude", "Neutral", "Trauer", "Überraschung"],
+        "y": [0.0249, 0.1472, 0.0037, 0.002, 0.8072, 0.0134, 0.0016],
+        "name": "Werte der verschiedenen Emotionen",
+        "line": {
+            "width": 1
+        }
+    }
+]

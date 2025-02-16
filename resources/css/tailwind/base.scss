@@ -1,0 +1,27 @@
+@tailwind base;
+
+@layer base {
+    @view-transition {
+        navigation: auto;
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    html {
+        @apply scroll-smooth text-pretty bg-background text-foreground-subtle antialiased;
+    }
+
+    img {
+        @apply object-cover;
+    }
+
+    mark {
+        @apply rounded-sm bg-brand p-1 text-brand-subtle;
+    }
+}

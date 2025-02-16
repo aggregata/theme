@@ -1,0 +1,35 @@
+.kg-file-card {
+    @apply rounded-xl border p-6;
+
+    &-container {
+        @apply flex items-center gap-3 no-underline;
+    }
+    &-contents {
+        @apply grow leading-6;
+    }
+    &-title {
+        @apply line-clamp-1 leading-tight;
+    }
+    &-caption {
+        @apply mt-1.5 line-clamp-1 text-sm font-normal text-foreground-subtle;
+    }
+    &-metadata {
+        @apply mt-1.5 flex gap-1 text-sm text-foreground-subtle;
+    }
+    &-filename,
+    &-filesize {
+        @apply line-clamp-1 rounded-md bg-background-subtle px-2;
+    }
+    &-icon {
+        @apply hidden size-24 place-content-center rounded-xl bg-background-subtle md:grid;
+
+        svg {
+            @apply size-8;
+        }
+    }
+
+    &-medium,
+    &-small {
+        /*! Ghost theme requirement */
+    }
+}

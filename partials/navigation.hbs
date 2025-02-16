@@ -1,0 +1,10 @@
+{{#foreach navigation}}
+    {{#unless isSecondary}}
+        <a class="leading-12 md:leading-8 button-ghost hover:bg-border focus:bg-border {{#if current}}bg-border{{/if}}"
+            href="{{url absolute='true'}}">
+            {{label}}
+        </a>
+    {{else}}
+        <a class="button-ghost" href="{{url}}">{{label}}</a>
+    {{/unless}}
+{{/foreach}}

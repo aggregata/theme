@@ -1,0 +1,59 @@
+// Ghost search button
+.gh-search-icon {
+    @apply rounded-full transition-colors;
+    background: theme('colors.background.subtle') !important;
+    outline: revert !important;
+
+    @media (max-width: calc(theme('screens.md') - 1px)) {
+        &:hover,
+        &:focus {
+            background: theme('colors.border') !important;
+        }
+    }
+
+    @media (min-width: theme('screens.md')) {
+        background: theme('colors.foreground.DEFAULT') !important;
+    }
+
+    svg {
+        @apply size-4 text-foreground md:text-background;
+    }
+}
+
+.gh-font-heading {
+    font-family: var(--gh-font-heading);
+}
+
+.gh-font-body {
+    font-family: var(--gh-font-body);
+}
+
+// Ghost editor card layouts
+.kg-card {
+    @apply my-8;
+
+    &:not(.kg-width-wide, .kg-width-full) {
+        @apply mx-auto max-w-[45rem];
+    }
+
+    figcaption {
+        @apply text-center font-medium italic;
+
+        & p {
+            @apply my-0;
+        }
+    }
+}
+
+.kg-width-wide,
+.kg-width-full {
+    /*! Ghost theme requirement */
+}
+
+.kg-align-center {
+    @apply text-center;
+}
+
+.kg-style-accent {
+    @apply bg-brand;
+}

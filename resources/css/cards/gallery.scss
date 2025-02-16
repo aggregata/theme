@@ -1,0 +1,6 @@
+.kg-gallery-card {
+    --gap: 1.5rem;
+}
+.kg-gallery-image {
+    @apply overflow-hidden rounded-xl;
+}

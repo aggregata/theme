@@ -1,0 +1,42 @@
+{{!< ../default}}
+
+<div class='mx-auto w-full max-w-[48rem] px-6 py-18'>
+    <header class='w-full text-balance text-center'>
+        <div class='rounded-xl bg-gradient-to-b from-background-subtle to-transparent px-6 py-18'>
+            <h1 class='text-h4 font-medium leading-tight text-foreground'>
+                {{t 'Authors'}}
+            </h1>
+        </div>
+    </header>
+
+    <main class='mt-18'>
+        <section class='space-y-6'>
+            {{#get 'authors' include='count.posts'}}
+                {{#foreach authors}}
+                    {{#if count.posts}}
+                        <a class='block space-y-3 rounded-xl border p-6' href='{{url}}'>
+                            <div class='flex items-center gap-3'>
+                                {{#if profile_image}}
+                                    <img
+                                        class='size-12 rounded-full border'
+                                        src='{{img_url profile_image format='avif' size='xs'}}'
+                                        alt='{{name}}'
+                                    />
+                                {{/if}}
+                                <h2 class='font-medium text-foreground'>{{name}}</h2>
+                            </div>
+                            {{#if bio}}
+                                <p class='ml-15'>{{bio}}</p>
+                            {{/if}}
+                            <div class='flex flex-wrap gap-1 text-sm font-medium leading-6'>
+                                <span>
+                                    {{plural count.posts empty='Articles' singular='% Article' plural='% Articles'}}
+                                </span>
+                            </div>
+                        </a>
+                    {{/if}}
+                {{/foreach}}
+            {{/get}}
+        </section>
+    </main>
+</div>

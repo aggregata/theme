@@ -1,0 +1,62 @@
+.kg-callout {
+    &-card {
+        @apply flex gap-3 rounded-xl p-6;
+        border: 0.0625rem solid var(--callout-border);
+        background: var(--callout-background);
+
+        &-accent,
+        &-background-accent {
+            --callout-border: light-dark(theme('colors.indigo.200'), theme('colors.indigo.900'));
+            --callout-background: light-dark(theme('colors.indigo.100'), theme('colors.indigo.950'));
+        }
+        &-blue,
+        &-background-blue {
+            --callout-border: light-dark(theme('colors.blue.200'), theme('colors.blue.900'));
+            --callout-background: light-dark(theme('colors.blue.100'), theme('colors.blue.950'));
+        }
+        &-green,
+        &-background-green {
+            --callout-border: light-dark(theme('colors.green.200'), theme('colors.green.900'));
+            --callout-background: light-dark(theme('colors.green.100'), theme('colors.green.950'));
+        }
+        &-grey,
+        &-background-grey {
+            --callout-border: light-dark(theme('colors.zinc.300'), theme('colors.zinc.800'));
+            --callout-background: light-dark(theme('colors.zinc.200'), theme('colors.zinc.900'));
+        }
+        &-pink,
+        &-background-pink {
+            --callout-border: light-dark(theme('colors.pink.200'), theme('colors.pink.900'));
+            --callout-background: light-dark(theme('colors.pink.100'), theme('colors.pink.950'));
+        }
+        &-purple,
+        &-background-purple {
+            --callout-border: light-dark(theme('colors.purple.200'), theme('colors.purple.900'));
+            --callout-background: light-dark(theme('colors.purple.100'), theme('colors.purple.950'));
+        }
+        &-red,
+        &-background-red {
+            --callout-border: light-dark(theme('colors.red.200'), theme('colors.red.900'));
+            --callout-background: light-dark(theme('colors.red.100'), theme('colors.red.950'));
+        }
+        &-white,
+        &-background-white {
+            --callout-border: light-dark(theme('colors.zinc.200'), theme('colors.zinc.800'));
+        }
+        &-yellow,
+        &-background-yellow {
+            --callout-border: light-dark(theme('colors.yellow.200'), theme('colors.yellow.900'));
+            --callout-background: light-dark(theme('colors.yellow.100'), theme('colors.yellow.950'));
+        }
+    }
+    &-emoji,
+    &-card-emoji {
+        @apply size-8 shrink-0 rounded-xl text-center leading-8;
+        background: var(--callout-border);
+    }
+
+    &-text,
+    &-card-text {
+        /*! Ghost theme requirement */
+    }
+}

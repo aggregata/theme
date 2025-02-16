@@ -1,0 +1,15 @@
+{{#primary_author}}
+    <a
+        class='flex gap-1 rounded-md bg-background-subtle transition-colors hover:bg-border focus:bg-border'
+        href='{{url}}'
+    >
+        {{#if profile_image}}
+            <img
+                class='h-6 w-6 rounded-md'
+                src='{{img_url profile_image format='avif' size='xs'}}'
+                alt='{{t "Portrait of {name}" name=name}}'
+            />
+        {{/if}}
+        <span class='px-2'>{{name}}</span>
+    </a>
+{{/primary_author}}

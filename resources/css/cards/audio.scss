@@ -1,0 +1,56 @@
+.kg-audio-card {
+    @apply flex-col items-center gap-6 rounded-xl border p-6 shadow-none md:flex-row;
+}
+
+.kg-audio-thumbnail {
+    @apply m-0 aspect-square w-24 shrink-0 rounded-md;
+}
+
+.kg-audio-player-container {
+    @apply py-3;
+}
+
+.kg-audio-title {
+    @apply mt-0 line-clamp-1 p-0 font-medium leading-6 text-foreground;
+}
+
+.kg-audio-player {
+    @apply mt-3 gap-1 p-0 leading-8 text-foreground-subtle;
+}
+
+.kg-audio-play-icon,
+.kg-audio-pause-icon {
+    @apply rounded-xl border bg-foreground p-2.5 text-background;
+
+    svg {
+        @apply size-3;
+    }
+}
+
+.kg-audio-current-time,
+.kg-audio-time,
+.kg-audio-playback-rate {
+    @apply w-auto min-w-0 text-sm tabular-nums;
+}
+
+.kg-audio-current-time,
+.kg-audio-duration {
+    @apply px-2 text-foreground-subtle;
+}
+
+.kg-audio-current-time {
+    @apply -mr-1;
+}
+
+.kg-audio-playback-rate {
+    @apply min-w-8 justify-center rounded-xl px-2 leading-8;
+}
+
+.kg-audio-mute-icon,
+.kg-audio-unmute-icon {
+    @apply rounded-xl p-2;
+
+    svg {
+        @apply size-4;
+    }
+}

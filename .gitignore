@@ -1,0 +1,25 @@
+# Sensitive files
+*.csv
+*.dat
+*.gz
+*.log
+*.out
+*.pid
+*.seed
+*.zip
+b-cov
+
+# Ghost
+logs
+pids
+results
+
+# Package manager files
+node_modules/
+npm-debug.log
+
+# Misc.
+.unlighthouse/
+
+# Build directory
+assets/

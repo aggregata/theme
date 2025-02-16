@@ -1,0 +1,67 @@
+<nav
+    class="sticky top-0 z-[1000] w-full px-6 pt-6 text-sm font-medium text-foreground md:static"
+    x-data="navigation"
+    x-on:keydown.escape="open = false"
+>
+    <div
+        class="relative z-50 mx-auto flex w-full max-w-[45rem] items-center justify-between rounded-full border bg-background/75 p-2 backdrop-blur-xl md:z-30 md:border-0 md:px-0"
+    >
+        <a class="button-ghost" href="/" title="{{t 'Back to homepage' }}">
+            {{> icons/aggregata }}
+            {{ @site.title }}
+        </a>
+
+        <button
+            class="fixed -top-full left-1/2 -translate-x-1/2 rounded-full bg-foreground px-4 leading-8 text-background opacity-0 md:focus:top-18 md:focus:opacity-100"
+            x-on:click="skip"
+        >
+            {{t 'Skip to content'}}
+        </button>
+
+        <div class="col-start-6 flex items-center gap-1 justify-self-end">
+            <a class="button-ghost is-icon" href="/rss/" target="_blank" title="{{t 'RSS'}}"> {{> icons/rss-feed }} </a>
+
+            <button
+                class="button-outline is-icon"
+                x-bind:class="{ 'is-icon': !shared }"
+                x-on:click="share({url: '{{ @site.url }}' })"
+                title="{{t 'Share this page' }}"
+            >
+                <div x-show="!shared">{{> icons/share-ios }}</div>
+                <div class="flex items-center gap-1 text-successful" x-show="shared" x-cloak x-transition>
+                    <span>{{t 'Copied' }}</span>
+                    {{> icons/clipboard-check }}
+                </div>
+            </button>
+
+            {{ search }}
+
+            <button class="button-primary is-icon md:hidden" x-on:click="toggle" title="{{t 'Toggle menu'}}">
+                {{> icons/menu }}
+            </button>
+        </div>
+    </div>
+
+    <div
+        class="pt-[4.75rem] absolute inset-x-3 top-3 z-40 flex max-h-screen flex-col content-start gap-3 overflow-y-auto rounded-[2rem] border bg-background-subtle/75 pb-3 px-3 backdrop-blur-xl md:fixed md:left-1/2 md:top-6 md:!flex md:h-max md:w-max md:-translate-x-1/2 md:flex-row md:rounded-full md:p-2"
+        x-cloak
+        x-show="open"
+        x-transition
+    >
+        {{ navigation }}
+
+        {{#if @site.allow_self_signup}}
+            {{#unless @member}}
+                <a
+                    class="button-primary mt-auto leading-12 md:leading-8"
+                    href="#/portal/signup"
+                    x-cloak
+                    x-show="scroll >= 72"
+                    x-on:scroll.window.throttle="scroll = window.scrollY"
+                    x-transition
+                    >{{t 'Subscribe' }}</a
+                >
+            {{/unless}}
+        {{/if}}
+    </div>
+</nav>

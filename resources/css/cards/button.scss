@@ -1,0 +1,14 @@
+.kg-button-card {
+    .kg-btn {
+        @apply inline-block rounded-full px-6 text-sm leading-12 no-underline;
+
+        &-accent {
+            @apply bg-foreground text-background;
+        }
+    }
+
+    &.kg-align-left,
+    &.kg-align-center {
+        /*! Ghost theme requirement */
+    }
+}

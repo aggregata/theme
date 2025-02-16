@@ -1,0 +1,74 @@
+@tailwind utilities;
+
+@layer utilities {
+    .rich-text {
+        @apply prose prose-brand max-w-none text-pretty marker:text-brand prose-headings:scroll-my-36 prose-blockquote:border-l-brand;
+
+        > * {
+            &:first-child {
+                @apply mt-0;
+            }
+
+            &:not(.kg-card) {
+                @apply mx-auto max-w-[45rem];
+
+                img {
+                    @apply rounded-xl;
+                }
+            }
+
+            &:last-child {
+                @apply mb-0;
+            }
+        }
+
+        a {
+            font-family: ui-sans-serif, system-ui, sans-serif;
+        }
+
+        code:where([class^='language-']) {
+            @apply rounded-md;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        > pre {
+            @apply my-8 grid overflow-hidden rounded-xl p-0;
+
+            code {
+                @apply overflow-x-auto p-5;
+            }
+        }
+
+        .katex-display {
+            @apply text-foreground;
+        }
+    }
+
+    .no-scrollbar {
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .mask {
+        &-to-t {
+            mask-image: linear-gradient(#fff, transparent);
+        }
+    }
+
+    .border-to-t {
+        @apply relative;
+
+        &::before {
+            @apply absolute inset-0 -z-10 block border-x border-border;
+            content: '';
+            mask-image: linear-gradient(transparent, #fff);
+        }
+    }
+}

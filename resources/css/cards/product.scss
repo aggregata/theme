@@ -1,0 +1,40 @@
+.kg-product {
+    &-card {
+        &-container {
+            @apply flex flex-wrap gap-3 rounded-xl border p-6;
+        }
+        &-image {
+            @apply col-span-2 mb-3 mt-0 aspect-video rounded-xl;
+        }
+        &-title {
+            @apply my-0 text-h6;
+        }
+        &-rating {
+            @apply ml-auto flex items-center gap-1;
+            &-star {
+                @apply fill-border;
+
+                svg {
+                    @apply size-4;
+                }
+            }
+            &-active {
+                @apply fill-foreground;
+            }
+        }
+        &-description {
+            @apply col-span-2;
+            p {
+                @apply my-0;
+            }
+        }
+        &-button {
+            @apply mt-3 w-full rounded-full bg-foreground px-6 text-center text-sm leading-12 text-background no-underline;
+        }
+
+        &-btn-accent,
+        &-title-container {
+            /*! Ghost theme requirement */
+        }
+    }
+}

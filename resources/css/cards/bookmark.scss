@@ -1,0 +1,37 @@
+.kg-bookmark {
+    &-card {
+        /*! Ghost theme requirement */
+    }
+
+    &-container {
+        @apply flex rounded-xl border p-6 no-underline;
+    }
+    &-content {
+        @apply leading-6;
+    }
+    &-title {
+        @apply line-clamp-1 leading-tight;
+    }
+    &-description {
+        @apply mt-3 line-clamp-2 text-sm font-normal text-foreground-subtle;
+    }
+    &-metadata {
+        @apply mt-3 flex items-center gap-3 text-sm;
+    }
+    &-icon {
+        @apply my-0 size-6 rounded-xl;
+    }
+    &-author {
+        @apply font-normal text-foreground-subtle;
+    }
+    &-publisher {
+        @apply hidden;
+    }
+    &-thumbnail {
+        @apply ml-6 hidden shrink-0 md:block;
+
+        img {
+            @apply my-0 size-30 rounded-xl;
+        }
+    }
+}

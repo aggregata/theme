@@ -1,0 +1,17 @@
+{{!< default}}
+
+<main class="grid grow py-18 px-6 w-full text-center text-balance">
+    <div
+        class="grid place-content-center w-full max-w-[45rem] mx-auto bg-gradient-to-b from-background-subtle to-transparent rounded-xl py-18 px-6">
+        <h1 class="text-h4 font-medium text-foreground leading-tight">
+            {{ statusCode }}
+        </h1>
+        <h2 class="mt-6 text-h6">
+            {{message}}
+        </h2>
+        <a class="button-primary mt-6" href="{{ @site.url }}">
+            {{> icons/arrow-left }}
+            {{t "Back to homepage" }}
+        </a>
+    </div>
+</main>
