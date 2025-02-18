@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, useHost } from 'vue';
-import { sleep } from '../utilities';
+import { observe, sleep } from '../utilities';
 import { ClipboardCheck, Copy } from '@iconoir/vue';
 
 const host = useHost()!;
@@ -9,10 +9,21 @@ const copied = ref(false);
 defineOptions({ inheritAttrs: false });
 
 onMounted(async () => {
-    const { default: hljs } = await import('highlight.js');
-    hljs.highlightElement(host);
+    const { codeToHtml } = await import('shiki/bundle/web');
 
-    host?.setAttribute('init', 'true');
+    observe(host as HTMLElement, async (entry: any) => {
+        if (host?.hasAttribute('init')) return;
+
+        if (entry.isIntersecting) {
+            const html = await codeToHtml(host.textContent!, {
+                lang: host.className.split('-')[1],
+                theme: 'catppuccin-mocha',
+            });
+
+            host.innerHTML = html;
+            host?.setAttribute('init', 'true');
+        }
+    });
 });
 
 const copy = async () => {
@@ -25,9 +36,7 @@ const copy = async () => {
 
 <template>
     <div>
-        <pre>
-            <code><slot /></code>
-        </pre>
+        <slot />
         <button :class="['code-copy', { copied }]" @click="copy" title="Click to copy">
             <Copy v-if="!copied" width="16" height="16" />
             <ClipboardCheck v-if="copied" width="16" height="16" />
@@ -38,21 +47,6 @@ const copy = async () => {
 <style scoped>
 div {
     position: relative;
-}
-
-pre {
-    display: flex;
-    overflow-x: auto;
-    font-weight: 400;
-    font-size: 0.875em;
-    line-height: 1.7142857;
-    padding: 0.8571429em 1.1428571em;
-    margin: unset;
-}
-
-code {
-    font-family: inherit;
-    background: transparent;
 }
 
 button {

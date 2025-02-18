@@ -60,6 +60,14 @@
 
     vue-code {
         @apply overflow-hidden rounded-xl border;
+
+        pre {
+            margin: unset !important;
+        }
+
+        + figcaption {
+            @apply font-mono;
+        }
     }
 
     vue-plot {
