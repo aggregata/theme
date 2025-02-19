@@ -1,8 +1,9 @@
 .kg-callout {
     &-card {
-        @apply flex gap-3 rounded-xl p-6;
+        @apply flex gap-3 rounded-xl p-5;
         border: 0.0625rem solid var(--callout-border);
         background: var(--callout-background);
+        color: light-dark(theme('colors.zinc.950'), theme('colors.zinc.50'));
 
         &-accent,
         &-background-accent {

@@ -5,6 +5,10 @@
         navigation: auto;
     }
 
+    :root {
+        color-scheme: light dark;
+    }
+
     [x-cloak] {
         display: none !important;
     }
@@ -15,6 +19,10 @@
 
     html {
         @apply scroll-smooth text-pretty bg-background text-foreground-subtle antialiased;
+    }
+
+    iframe {
+        color-scheme: light;
     }
 
     img {
