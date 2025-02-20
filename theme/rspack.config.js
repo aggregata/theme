@@ -79,9 +79,7 @@ export default (env, argv) => {
         },
 
         optimization: {
-            minimizer: [
-                new rspack.SwcJsMinimizerRspackPlugin(),
-            ],
+            minimizer: [new rspack.SwcJsMinimizerRspackPlugin()],
         },
 
         output: {

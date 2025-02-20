@@ -1,15 +1,17 @@
-{{#primary_author}}
-    <a
-        class='flex gap-1 rounded-md bg-background-subtle transition-colors hover:bg-border focus:bg-border'
-        href='{{url}}'
-    >
-        {{#if profile_image}}
-            <img
-                class='h-6 w-6 rounded-md'
-                src='{{img_url profile_image format='avif' size='xs'}}'
-                alt='{{t "Portrait of {name}" name=name}}'
-            />
-        {{/if}}
-        <span class='px-2'>{{name}}</span>
-    </a>
-{{/primary_author}}
+<div class='flex pl-1 pr-2'>
+    {{#foreach authors}}
+        <a class='-ml-1 overflow-hidden rounded-full border' href='{{url}}' title='{{name}}'>
+            {{#if profile_image}}
+                <img
+                    class='size-6'
+                    src='{{img_url profile_image format='avif' size='xs'}}'
+                    alt='{{t "Portrait of {name}" name=name}}'
+                />
+            {{else}}
+                <div class='bg-background-subtle p-1'>
+                    {{> icons/profile-circle }}
+                </div>
+            {{/if}}
+        </a>
+    {{/foreach}}
+</div>

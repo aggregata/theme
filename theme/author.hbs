@@ -1,6 +1,7 @@
 {{!< default}}
 
 <div class="px-6 py-18">
+
     {{#author}}
     <header class="relative max-w-[45rem] overflow-hidden text-balance rounded-xl text-center border">
         {{#if cover_image}}
@@ -10,20 +11,20 @@
         <div class="px-6 py-18 bg-gradient-to-b from-transparent to-background-subtle">
             {{#if profile_image}}
             <img
-                class="mx-auto size-18 rounded-full border"
+                class="mb-6 mx-auto size-18 rounded-full border"
                 src="{{img_url profile_image format='avif' size='xs' }}"
                 alt="{{ name }}"
             />
             {{/if}}
 
-            <h1 class="mt-6 text-h4 font-medium leading-tight text-foreground">{{ name }}</h1>
+            <h1 class="text-h4 font-medium leading-tight text-foreground">{{ name }}</h1>
             {{#if bio}}
             <p class="mt-6">{{ bio }}</p>
             {{/if}}
 
             <div class="mt-6 flex flex-wrap justify-center gap-1 text-sm font-medium leading-6">
                 <span class="px-2">
-                    {{plural pagination.total empty='Articles' singular='% Article' plural='% Articles'}}
+                    {{plural ../pagination.total empty='0 Articles' singular='% Article' plural='% Articles'}}
                 </span>
                 {{#if website}}
                 <a

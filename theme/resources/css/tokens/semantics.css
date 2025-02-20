@@ -1,11 +1,11 @@
 :root {
-  /* Borders */
-  --border-width: 0.0625rem;
+    /* Borders */
+    --border-width: 0.0625rem;
 
-  /* Animations */
-  --animation-duration: 150ms;
+    /* Animations */
+    --animation-duration: 150ms;
 
-  @media (prefers-reduced-motion) {
-    --animation-duration: 0ms;
-  }
+    @media (prefers-reduced-motion) {
+        --animation-duration: 0ms;
+    }
 }

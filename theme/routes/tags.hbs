@@ -10,7 +10,7 @@
     </header>
 
     <main class='mt-18'>
-        <section class='flex flex-wrap justify-center gap-1'>
+        <section class='space-y-2'>
             {{#get 'tags' include='count.posts'}}
                 {{#foreach tags}}
                     <a
@@ -19,11 +19,16 @@
                         title='{{description}}'
                     >
                         <div class='flex items-center gap-3 font-medium leading-6'>
-                            <h2 class='text-foreground'>{{name}}</h2>
+                            <h2 class='truncate text-foreground'>{{name}}</h2>
                             <span
-                                class='ml-auto block min-w-6 rounded-md bg-background-subtle px-2 text-center text-sm'
+                                class='ml-auto block min-w-6 shrink-0 whitespace-nowrap rounded-md bg-background-subtle px-2 text-center text-sm'
                             >
-                                {{plural count.posts empty='Articles' singular='% Article' plural='% Articles'}}</span>
+                                {{plural
+                                    count.posts
+                                    empty='0 Articles'
+                                    singular='% Article'
+                                    plural='% Articles'
+                                }}</span>
                         </div>
                     </a>
                 {{/foreach}}

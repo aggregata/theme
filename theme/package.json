@@ -15,9 +15,9 @@
         "build": "rspack build",
         "pretest": "npm run build",
         "test": "npx gscan .",
-        "zip": "npm run build && bestzip 'aggregata.zip' 'assets/*' 'partials/*' 'members/*' 'pages/*' 'routes/*' '*.hbs' 'package.json'",
+        "zip": "npm run build && bestzip '../aggregata.zip' 'assets/*' 'partials/*' 'members/*' 'pages/*' 'routes/*' '*.hbs' 'package.json'",
         "sync": "browser-sync 'http://localhost:2368' 'assets/globals.js' -w",
-        "prettier": "prettier **/*.{css,hbs,js,scss,ts,vue} --write",
+        "prettier": "prettier '**/*.{css,hbs,js,scss,ts,vue}' '!assets/**' '!node_modules/**' --write",
         "report": "npx unlighthouse --site 'localhost:2368'"
     },
     "author": {

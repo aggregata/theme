@@ -5,21 +5,21 @@
 
     {{#tag}}
         <header
-            class="max-w-[45rem] text-center text-balance p-6 bg-gradient-to-b from-background-subtle to-transparent rounded-xl">
+            class="max-w-[45rem] text-center text-balance py-18 px-6 bg-gradient-to-b from-background-subtle to-transparent rounded-xl">
             {{#if feature_image}}
-                <img class="mx-auto border rounded-full size-24" src="{{img_url feature_image format='avif' size='xs' }}"
+                <img class="mb-6 mx-auto border rounded-full size-24" src="{{img_url feature_image format='avif' size='xs' }}"
                     alt="{{name}}" />
             {{/if}}
-            <h1 class="mt-6 text-h4 font-medium text-foreground leading-tight">{{name}}</h1>
+            <h1 class="text-h4 font-medium text-foreground leading-tight">{{name}}</h1>
             {{#if description}}
-                <p class="mt-6 text-h6">{{description}}</p>
+                <p class="mt-6">{{description}}</p>
             {{/if}}
             <div class="flex gap-1 flex-wrap justify-center mt-6 text-sm font-medium leading-6">
                 <span class="bg-background-subtle px-2 rounded-md">
-                    {{plural ../pagination.total empty='Articles' singular='% Article' plural='% Articles'}}
+                    {{plural ../pagination.total empty='0 Articles' singular='% Article' plural='% Articles'}}
                 </span>
             </div>
-            <a class="inline-block mt-3 text-xs leading-6 px-2 text-foreground underline" href="/authors/">{{t 'Discover all authors'}}</a>
+            <a class="inline-block mt-3 text-xs leading-6 px-2 text-foreground underline" href="/tags/">{{t 'Discover all tags'}}</a>
         </header>
 
     {{/tag}}
