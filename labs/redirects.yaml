@@ -1,24 +1,22 @@
 302:
   # English redirects
+  /en/blog/web/cross-document-view-transitions-for-multi-page-applications: /cross-document-view-transitions-for-multi-page-applications
   /en/blog/web/improve-a-component-library-for-designers-and-developers: /improve-a-component-library-for-designers-and-developers
   /en/blog/applications/ollama-integrations: /ollama-integrations
   /en/blog/applications/ollama-self-hosting: /ollama-self-hosting
-  /en/blog/web/leverage-the-view-transitions-api-in-any-project: /leverage-the-view-transitions-api-in-any-project
-  /en/blog/web/set-up-a-new-project-with-tailwind-css-4: /set-up-a-new-project-with-tailwind-css-4
-  /en/blog/pretrained-transformer/stable-diffusion-xl-t2i: /stable-diffusion-xl-t2i
-  /en/blog/reinforcement-learning/ddpg: /ddpg
+  /en/blog/web/leverage-the-view-transitions-api-in-any-project: /leverage-the-view-transition-api-in-any-project
+  /en/blog/web/set-up-a-new-project-with-tailwind-css-4: /set-up-a-new-project-with-tailwind-css-4-0
   /en/blog/cyber-security/owasp: /owasp
   /en/blog/pretrained-transformer/gemma: /gemma
   /en/blog/web/expand-a-component-library-for-designers-and-developers: /expand-a-component-library-for-designers-and-developers
   /en/blog/web/create-a-component-library-for-designers-and-developers: /create-a-component-library-for-designers-and-developers
-  /en/blog/cyber-security/neural-networks: /neural-networks
-  /en/blog/aggregata/adapting-and-evolving-year-two: /adapting-and-evolving-year-two
+  /en/blog/aggregata/adapting-and-evolving-year-two: /adapting-and-evolving-year-two-of-aggregata
   /en/blog/artificial-intelligence/how-we-use-deep-learning-models: /how-we-use-deep-learning-models
   /en/blog/web/define-a-component-library-for-designers-and-developers: /define-a-component-library-for-designers-and-developers
   /en/blog/web/crafting-a-detailed-dialog-element-using-microinteractions: /crafting-a-detailed-dialog-element-using-microinteractions
   /en/blog/pretrained-transformer/matcha-quarta: /matcha-quarta
   /en/blog/pretrained-transformer/kosmos2: /kosmos2
-  /en/blog/web/visiting-the-we-are-developers-world-congress-2024: /visiting-the-we-are-developers-world-congress-2024
+  /en/blog/web/visiting-the-we-are-developers-world-congress-2024: /visiting-the-wearedevelopers-world-congress-2024
   /en/blog/web/accessibility-a-necessity-not-an-afterthought: /accessibility-a-necessity-not-an-afterthought
   /en/blog/reinforcement-learning/actor-critic: /actor-critic
   /en/blog/unsupervised-learning/principal-component-analysis: /principal-component-analysis
@@ -38,7 +36,6 @@
   /en/blog/unsupervised-learning/k-means: /k-means
   /en/blog/alpinejs/dynamic-imports-with-alpine: /dynamic-imports-with-alpine
   /en/blog/astro/astro-an-introduction-to-your-next-project: /astro-an-introduction-to-your-next-project
-  /en/blog/machine-learning/model-selection: /model-selection
   /en/blog/aggregata/one-year-of-aggregata-a-review-and-outlook: /one-year-of-aggregata-a-review-and-outlook
   /en/blog/artificial-intelligence/how-does-ai-learn-impressions-from-our-first-seminar: /how-does-ai-learn-impressions-from-our-first-seminar
   /en/blog/reinforcement-learning/on-off-policy: /on-off-policy
@@ -48,7 +45,6 @@
   /en/blog/alpinejs/temporary-and-persistent-state-management-with-alpine: /temporary-and-persistent-state-management-with-alpine
   /en/blog/supervised-learning/random-forests: /random-forests
   /en/blog/supervised-learning/k-nearest-neighbor: /k-nearest-neighbor
-  /en/blog/web/colophon-how-we-build-aggregata: /colophon-how-we-build-aggregata
   /en/blog/supervised-learning/decision-trees: /decision-trees
   /en/blog/supervised-learning/logistical-regression: /logistical-regression
   /en/blog/artificial-intelligence/working-with-artificial-intelligence-risks-and-side-effects: /working-with-artificial-intelligence-risks-and-side-effects
@@ -69,25 +65,23 @@
   /en/blog/supervised-learning/linear-regression: /linear-regression
   /en/blog/alpinejs/alpine-in-a-production-environment: /alpine-in-a-production-environment
   # German redirects
+  /de/blog/web/cross-document-view-transitions-for-multi-page-applications: /cross-document-view-transitions-for-multi-page-applications
   /de/blog/web/improve-a-component-library-for-designers-and-developers: /improve-a-component-library-for-designers-and-developers
   /de/blog/applications/ollama-integrations: /ollama-integrations
   /de/blog/applications/ollama-self-hosting: /ollama-self-hosting
-  /de/blog/web/leverage-the-view-transitions-api-in-any-project: /leverage-the-view-transitions-api-in-any-project
-  /de/blog/web/set-up-a-new-project-with-tailwind-css-4: /set-up-a-new-project-with-tailwind-css-4
-  /de/blog/pretrained-transformer/stable-diffusion-xl-t2i: /stable-diffusion-xl-t2i
-  /de/blog/reinforcement-learning/ddpg: /ddpg
+  /de/blog/web/leverage-the-view-transitions-api-in-any-project: /leverage-the-view-transition-api-in-any-project
+  /de/blog/web/set-up-a-new-project-with-tailwind-css-4: /set-up-a-new-project-with-tailwind-css-4-0
   /de/blog/cyber-security/owasp: /owasp
   /de/blog/pretrained-transformer/gemma: /gemma
   /de/blog/web/expand-a-component-library-for-designers-and-developers: /expand-a-component-library-for-designers-and-developers
   /de/blog/web/create-a-component-library-for-designers-and-developers: /create-a-component-library-for-designers-and-developers
-  /de/blog/cyber-security/neural-networks: /neural-networks
-  /de/blog/aggregata/adapting-and-evolving-year-two: /adapting-and-evolving-year-two
+  /de/blog/aggregata/adapting-and-evolving-year-two: /adapting-and-evolving-year-two-of-aggregata
   /de/blog/artificial-intelligence/how-we-use-deep-learning-models: /how-we-use-deep-learning-models
   /de/blog/web/define-a-component-library-for-designers-and-developers: /define-a-component-library-for-designers-and-developers
   /de/blog/web/crafting-a-detailed-dialog-element-using-microinteractions: /crafting-a-detailed-dialog-element-using-microinteractions
   /de/blog/pretrained-transformer/matcha-quarta: /matcha-quarta
   /de/blog/pretrained-transformer/kosmos2: /kosmos2
-  /de/blog/web/visiting-the-we-are-developers-world-congress-2024: /visiting-the-we-are-developers-world-congress-2024
+  /de/blog/web/visiting-the-we-are-developers-world-congress-2024: /visiting-the-wearedevelopers-world-congress-2024
   /de/blog/web/accessibility-a-necessity-not-an-afterthought: /accessibility-a-necessity-not-an-afterthought
   /de/blog/reinforcement-learning/actor-critic: /actor-critic
   /de/blog/unsupervised-learning/principal-component-analysis: /principal-component-analysis
@@ -107,7 +101,6 @@
   /de/blog/unsupervised-learning/k-means: /k-means
   /de/blog/alpinejs/dynamic-imports-with-alpine: /dynamic-imports-with-alpine
   /de/blog/astro/astro-an-introduction-to-your-next-project: /astro-an-introduction-to-your-next-project
-  /de/blog/machine-learning/model-selection: /model-selection
   /de/blog/aggregata/one-year-of-aggregata-a-review-and-outlook: /one-year-of-aggregata-a-review-and-outlook
   /de/blog/artificial-intelligence/how-does-ai-learn-impressions-from-our-first-seminar: /how-does-ai-learn-impressions-from-our-first-seminar
   /de/blog/reinforcement-learning/on-off-policy: /on-off-policy
@@ -117,7 +110,6 @@
   /de/blog/alpinejs/temporary-and-persistent-state-management-with-alpine: /temporary-and-persistent-state-management-with-alpine
   /de/blog/supervised-learning/random-forests: /random-forests
   /de/blog/supervised-learning/k-nearest-neighbor: /k-nearest-neighbor
-  /de/blog/web/colophon-how-we-build-aggregata: /colophon-how-we-build-aggregata
   /de/blog/supervised-learning/decision-trees: /decision-trees
   /de/blog/supervised-learning/logistical-regression: /logistical-regression
   /de/blog/artificial-intelligence/working-with-artificial-intelligence-risks-and-side-effects: /working-with-artificial-intelligence-risks-and-side-effects
