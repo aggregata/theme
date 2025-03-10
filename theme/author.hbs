@@ -3,7 +3,7 @@
 <div class="px-6 py-18">
 
     {{#author}}
-    <header class="relative max-w-[45rem] overflow-hidden text-balance rounded-xl text-center border">
+    <header class="relative max-w-[45rem] overflow-hidden rounded-xl text-center border">
         {{#if cover_image}}
         <img class="absolute inset-0 -z-10 size-full" src="{{img_url cover_image format='avif' size='md' }}" alt="{{ name }}" />
         {{/if}}
@@ -19,7 +19,7 @@
 
             <h1 class="text-h4 font-medium leading-tight text-foreground">{{ name }}</h1>
             {{#if bio}}
-            <p class="mt-6">{{ bio }}</p>
+            <p class="mt-3 text-balance">{{ bio }}</p>
             {{/if}}
 
             <div class="mt-6 flex flex-wrap justify-center gap-1 text-sm font-medium leading-6">

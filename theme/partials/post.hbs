@@ -28,14 +28,23 @@ Re-usable card for linking to posts
     <p class="mt-3">{{excerpt characters='150'}}</p>
   </a>
 
-  <div class="mt-3 flex flex-wrap gap-1 leading-6 text-sm font-medium">
+  <div class="mt-3 flex items-center flex-wrap gap-1 leading-6 text-sm font-medium">
+    {{> author}}
+      {{#unless access}}
+        <a
+          class="text-background bg-foreground flex p-1 rounded-md"
+          href="#/portal/account/plans"
+          title="Get Early Access"
+        >
+          {{> icon icon="lock" }}
+        </a>
+      {{/unless}}
     {{#if featured}}
       <span class="flex flex-wrap gap-1 items-center px-2 rounded-md text-background bg-foreground">
-        {{> icons/sparks }}
+        {{> icon icon="sparks-solid" }}
         {{t 'Featured'}}
       </span>
     {{/if}}
-    {{> author}}
     {{#primary_tag}}
       <a class="bg-background-subtle px-2 rounded-md hover:bg-border focus:bg-border transition-colors"
         href="{{url}}">{{name}}</a>

@@ -1,6 +1,7 @@
 routes:
   /authors/: routes/authors
   /tags/: routes/tags
+  /thanks/: routes/thanks
 
 collections:
   /:

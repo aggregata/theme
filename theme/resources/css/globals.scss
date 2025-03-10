@@ -25,4 +25,7 @@
 @use 'cards/toggle';
 @use 'cards/video';
 
+@use 'plugins/iconoir';
 @use 'plugins/katex';
+
+@use 'overrides';

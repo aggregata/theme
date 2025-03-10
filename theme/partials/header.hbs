@@ -19,7 +19,9 @@
         </button>
 
         <div class="col-start-6 flex items-center gap-1 justify-self-end">
-            <a class="button-ghost is-icon" href="/rss/" target="_blank" title="{{t 'RSS'}}"> {{> icons/rss-feed }} </a>
+            <a class="button-ghost is-icon" href="/rss/" target="_blank" title="{{t 'RSS'}}">
+                {{> icon icon="rss-feed" }}
+            </a>
 
             <button
                 class="button-outline is-icon"
@@ -27,41 +29,60 @@
                 x-on:click="share({url: '{{ @site.url }}' })"
                 title="{{t 'Share this page' }}"
             >
-                <div x-show="!shared">{{> icons/share-ios }}</div>
+                <div x-show="!shared">
+                    {{> icon icon="share-ios" }}
+                </div>
                 <div class="flex items-center gap-1 text-successful" x-show="shared" x-cloak x-transition>
                     <span>{{t 'Copied' }}</span>
-                    {{> icons/clipboard-check }}
+                    {{> icon icon="clipboard-check" }}
                 </div>
             </button>
 
             {{ search }}
 
             <button class="button-primary is-icon md:hidden" x-on:click="toggle" title="{{t 'Toggle menu'}}">
-                {{> icons/menu }}
+                {{> icon icon="menu" }}
             </button>
         </div>
     </div>
 
     <div
-        class="pt-[4.75rem] absolute inset-x-3 top-3 z-40 flex max-h-screen flex-col content-start gap-1 overflow-y-auto rounded-[2rem] border bg-background-subtle/75 pb-3 px-3 backdrop-blur-xl md:fixed md:left-1/2 md:top-6 md:!flex md:h-max md:w-max md:-translate-x-1/2 md:flex-row md:rounded-full md:p-2"
+        class="pt-[4.75rem] absolute inset-x-3 top-3 z-40 flex max-h-screen flex-col items-center content-start gap-1 overflow-y-auto rounded-[2rem] border bg-background-subtle/75 pb-3 px-3 backdrop-blur-xl md:fixed md:left-1/2 md:top-6 md:!flex md:h-max md:w-max md:-translate-x-1/2 md:flex-row md:rounded-full md:p-2"
         x-cloak
         x-show="open"
         x-transition
     >
         {{ navigation }}
 
-        {{#if @site.allow_self_signup}}
-            {{#unless @member}}
+        <div class="button-outline px-0">
+            {{#if @site.allow_self_signup}}
+                {{#if @member}}
+                    <a
+                        class="button-ghost"
+                        href="#/portal/account"
+                    >
+                        {{> icon icon="profile-circle" }}
+                        {{t 'Account' }}
+                    </a>
+                {{else}}
                 <a
-                    class="button-primary mt-auto leading-12 md:leading-8"
+                    class="button-ghost"
                     href="#/portal/signup"
-                    x-cloak
-                    x-show="scroll >= 72"
-                    x-on:scroll.window.throttle="scroll = window.scrollY"
-                    x-transition
-                    >{{t 'Subscribe' }}</a
                 >
-            {{/unless}}
-        {{/if}}
+                    {{> icon icon="spark-solid" }}
+                    {{t 'Join' }}
+                    </a>
+                {{/if}}
+            {{/if}}
+
+            <a
+                class="button-primary is-icon"
+                href="#/portal/support"
+                target="_blank"
+                title="{{t 'Donate'}}"
+            >
+                {{> icon icon="donate" }}
+            </a>
+        </div>
     </div>
 </nav>

@@ -1,0 +1,32 @@
+<section class="relative grid grid-cols-3 gap-6">
+    <div class="col-span-full flex gap-3 items-center">
+        <hr class="grow border-dashed">
+        <p class="text-xs font-medium">{{t 'You might also like' }}</p>
+        <hr class="grow border-dashed">
+    </div>
+    {{#get 'posts' include="tags,authors" limit="3"}}
+        {{#foreach posts}}
+            <article class="space-y-3" style="view-transition-name: post-{{ slug }}">
+                <a href="{{url}}">
+                    {{#if feature_image}}
+                        <img
+                            class="mb-3 border w-full aspect-video rounded-xl"
+                            srcset="{{img_url feature_image format='avif' size='xs' }} 240w"
+                            src=" {{img_url feature_image format='avif' size='xs'}}"
+                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                            loading="lazy"
+                        >
+                    {{/if}}
+                    <h2 class="font-medium text-foreground">
+                        {{title}}
+                    </h2>
+                </a>
+                <div class="flex flex-wrap gap-1 leading-6 text-sm font-medium">
+                    {{> author}}
+                    <span class="px-2">{{date}}</span>
+                </div>
+            </article>
+        {{/foreach}}
+    {{/get}}
+    <hr class="grow border-dashed col-span-full">
+</section>

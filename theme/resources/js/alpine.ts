@@ -17,7 +17,6 @@ export const registerAlpineComponents = async () => {
     for (const key of context.keys()) {
         const { default: component } = await context(key);
         const name = key.split('/').pop()?.replace('.ts', '');
-
         Alpine.data(name!, component);
     }
 
