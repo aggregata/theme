@@ -54,7 +54,16 @@
     >
         {{ navigation }}
 
-        <div class="button-outline px-0">
+        <div class="button-outline w-full justify-between px-0">
+            <a
+                class="button-secondary is-icon"
+                href="#/portal/support"
+                target="_blank"
+                title="{{t 'Donate'}}"
+            >
+                {{> icon icon="donate" }}
+                {{t 'Donate' }}
+            </a>
             {{#if @site.allow_self_signup}}
                 {{#if @member}}
                     <a
@@ -66,23 +75,14 @@
                     </a>
                 {{else}}
                 <a
-                    class="button-ghost"
+                    class="button-primary"
                     href="#/portal/signup"
                 >
-                    {{> icon icon="spark-solid" }}
                     {{t 'Join' }}
+                    {{> icon icon="spark-solid" }}
                     </a>
                 {{/if}}
             {{/if}}
-
-            <a
-                class="button-primary is-icon"
-                href="#/portal/support"
-                target="_blank"
-                title="{{t 'Donate'}}"
-            >
-                {{> icon icon="donate" }}
-            </a>
         </div>
     </div>
 </nav>

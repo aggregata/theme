@@ -12,7 +12,6 @@ setTimeout(async () => {
     renderMathInText(richText);
 }, 0);
 
-
 // Externalize all link references within the rich text
 setTimeout(() => {
     const links = richText?.querySelectorAll('a');
