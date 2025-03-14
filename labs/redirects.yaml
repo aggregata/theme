@@ -1,5 +1,6 @@
 302:
   # English redirects
+  /en: /
   /en/blog/web/cross-document-view-transitions-for-multi-page-applications: /cross-document-view-transitions-for-multi-page-applications
   /en/blog/web/improve-a-component-library-for-designers-and-developers: /improve-a-component-library-for-designers-and-developers
   /en/blog/applications/ollama-integrations: /ollama-integrations
@@ -65,6 +66,7 @@
   /en/blog/supervised-learning/linear-regression: /linear-regression
   /en/blog/alpinejs/alpine-in-a-production-environment: /alpine-in-a-production-environment
   # German redirects
+  /de: /
   /de/blog/web/cross-document-view-transitions-for-multi-page-applications: /cross-document-view-transitions-for-multi-page-applications
   /de/blog/web/improve-a-component-library-for-designers-and-developers: /improve-a-component-library-for-designers-and-developers
   /de/blog/applications/ollama-integrations: /ollama-integrations
