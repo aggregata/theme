@@ -6,6 +6,7 @@
                     class='size-6'
                     src='{{img_url profile_image format='avif' size='xs'}}'
                     alt='{{t "Portrait of {name}" name=name}}'
+                    decoding="async"
                 />
             {{else}}
                 <div class='bg-background-subtle p-1'>

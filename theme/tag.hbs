@@ -7,8 +7,12 @@
         <header
             class="max-w-[45rem] text-center py-18 px-6 bg-gradient-to-b from-background-subtle to-transparent rounded-xl">
             {{#if feature_image}}
-                <img class="mb-6 mx-auto border rounded-full size-24" src="{{img_url feature_image format='avif' size='xs' }}"
-                    alt="{{name}}" />
+                <img
+                    class="mb-6 mx-auto border rounded-full size-24"
+                    src="{{img_url feature_image format='avif' size='xs' }}"
+                    alt="{{name}}"
+                    decoding="async"
+                />
             {{/if}}
             <h1 class="text-h4 font-medium text-foreground leading-tight">{{name}}</h1>
             {{#if description}}

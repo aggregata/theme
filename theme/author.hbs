@@ -5,7 +5,12 @@
     {{#author}}
     <header class="relative max-w-[45rem] overflow-hidden rounded-xl text-center border">
         {{#if cover_image}}
-        <img class="absolute inset-0 -z-10 size-full" src="{{img_url cover_image format='avif' size='md' }}" alt="{{ name }}" />
+        <img
+            class="absolute inset-0 -z-10 size-full"
+            src="{{img_url cover_image format='avif' size='md' }}"
+            alt="{{ name }}"
+            decoding="async"
+        />
         {{/if}}
 
         <div class="px-6 py-18 bg-gradient-to-b from-transparent to-background-subtle">
@@ -14,6 +19,7 @@
                 class="mb-6 mx-auto size-18 rounded-full border"
                 src="{{img_url profile_image format='avif' size='xs' }}"
                 alt="{{ name }}"
+                decoding="async"
             />
             {{/if}}
 
