@@ -33,7 +33,7 @@ export default <Partial<Config>>{
                 h1: ['4.375rem', 1.25],
             },
             gridTemplateColumns: {
-                post: '[left] 18rem [center] 12fr [right] 18rem',
+                post: '[left] minmax(auto, 18rem) [center] 12fr [right] minmax(auto, 18rem)',
             },
             borderWidth: {
                 DEFAULT: 'var(--border-width)',

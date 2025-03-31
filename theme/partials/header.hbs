@@ -29,7 +29,7 @@
                 x-on:click="share({url: '{{ @site.url }}' })"
                 title="{{t 'Share this page' }}"
             >
-                <div x-show="!shared">
+                <div class="size-4" x-show="!shared">
                     {{> icon icon="share-ios" }}
                 </div>
                 <div class="flex items-center gap-1 text-successful" x-show="shared" x-cloak x-transition>
