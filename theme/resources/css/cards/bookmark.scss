@@ -4,10 +4,10 @@
     }
 
     &-container {
-        @apply flex rounded-xl border p-6 no-underline;
+        @apply flex rounded-xl border p-6 no-underline items-center;
     }
     &-content {
-        @apply leading-6;
+        @apply leading-6 grow;
     }
     &-title {
         @apply line-clamp-1 leading-tight;
