@@ -27,7 +27,9 @@ onMounted(() => {
 <template>
     <ol ref="contents">
         <li v-for="(headline, i) in headlines">
-            <a :style="`--delay: ${i};`" :href="`#${headline.id}`">&nbsp;{{ headline.textContent }}</a>
+            <a :style="`--delay: ${i}; --indent: ${Number(headline.nodeName[1]) - 2}`" :href="`#${headline.id}`">
+                &nbsp;{{ headline.textContent }}
+            </a>
         </li>
     </ol>
 </template>
@@ -52,6 +54,7 @@ a {
     position: relative;
     color: var(--color, var(--foreground-subtle));
     padding-left: 2.25rem;
+    margin-left: calc(var(--indent, 0) * 0.75rem);
     text-decoration: none;
     font-weight: 500;
     animation: fade var(--animation-duration) calc(var(--delay, 0) * 37.5ms) both;
