@@ -1,9 +1,4 @@
-import { registerVueComponents } from './vue';
-
 const richText = document.querySelector('.rich-text');
-
-// Vue components
-registerVueComponents();
 
 // Katex
 setTimeout(async () => {

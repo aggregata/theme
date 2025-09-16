@@ -6,9 +6,8 @@ const contents = ref<HTMLOListElement | null>(null);
 const headlines = document.querySelectorAll('.rich-text > :is(h2, h3)');
 
 onMounted(() => {
-    const links = contents.value?.querySelectorAll('a');
-
     let active: Element | null | undefined = null;
+
     for (const headline of headlines) {
         const link = contents.value?.querySelector(`a[href="#${headline.id}"]`);
         observe(headline, (entry: IntersectionObserverEntry) => {

@@ -49,8 +49,8 @@
     }
 
     vue-code,
-    vue-katex, // @deprecated
-    vue-plot {
+    vue-plot,
+    vue-consent {
         @apply relative my-8 block opacity-0 transition-opacity;
 
         &[init] {
@@ -72,5 +72,9 @@
 
     vue-plot {
         @apply aspect-video w-full rounded-l-xl rounded-br-xl border border-border;
+    }
+
+    vue-placement {
+        @apply block;
     }
 }

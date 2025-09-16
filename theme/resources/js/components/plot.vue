@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, useHost } from 'vue';
 import { observe } from '../utilities';
-import { SystemRestart } from '@iconoir/vue';
 
 const host = useHost();
 

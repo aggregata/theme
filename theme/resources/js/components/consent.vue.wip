@@ -1,0 +1,91 @@
+<script setup lang="ts">
+import { onMounted, ref, useHost } from 'vue';
+
+const { platform, src } = defineProps<{
+    platform: string;
+    src: string;
+}>();
+
+const host = useHost();
+const consent = ref<Record<string, boolean>>(JSON.parse(localStorage.getItem('consent') || '{}'));
+
+onMounted(() => host?.setAttribute('init', 'true'));
+
+const toggleConsent = () => {
+    consent.value[platform] = !consent.value[platform];
+
+    const local = JSON.parse(localStorage.getItem('consent') || '{}');
+    local[platform.toLocaleLowerCase()] = consent.value[platform];
+    localStorage.setItem('consent', JSON.stringify(local));
+};
+</script>
+
+<template>
+    <div class="consent">
+        <div v-if="!consent[platform]" class="consent-message">
+            <h4>Editorially recommended external content</h4>
+            <p>Here you will find external content from {{ platform }} that supplements the page.</p>
+            <p>
+                <small>
+                    I agree that content from {{ platform }} may be displayed to me. Personal data may be transmitted to
+                    third-party platforms.
+                </small>
+            </p>
+            <a href="https://aggregata.de/privacy/">Read more about this in our privacy policy</a>
+            <button @click="toggleConsent">Allow {{ platform }} content</button>
+        </div>
+        <div v-else="consent[platform]" class="consent-content">
+            <iframe
+                :src="src"
+                :title="platform"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            />
+            <button @click="toggleConsent">Disallow {{ platform }} consent</button>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+.consent {
+    &-message,
+    iframe {
+        border-radius: 0.5rem;
+        border: 0.0625rem solid var(--border);
+    }
+
+    &-message {
+        color: var(--foreground);
+        padding: 1.5rem;
+        background: var(--background-subtle);
+
+        & > *:not(:last-child) {
+            margin-block: 0 1rem;
+        }
+    }
+}
+
+iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+a {
+    display: inline-block;
+}
+
+button {
+    margin-inline: auto;
+    cursor: pointer;
+    display: block;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    line-height: 1rem;
+    border: unset;
+    background: var(--foreground);
+    color: var(--background);
+    font-weight: 500;
+}
+</style>
