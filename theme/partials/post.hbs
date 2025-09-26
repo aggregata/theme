@@ -17,11 +17,11 @@ Re-usable card for linking to posts
         <img
           class="border w-full aspect-video mb-6 rounded-xl"
           srcset="
-            {{img_url feature_image format='avif' size='xs' }} 240w,
-            {{img_url feature_image format='avif' size='sm' }} 480w,
-            {{img_url feature_image format='avif' size='md' }} 720w
+            {{img_url feature_image format='avif' size='sm' }} 240w,
+            {{img_url feature_image format='avif' size='md' }} 480w,
+            {{img_url feature_image format='avif' size='lg' }} 720w
           "
-          src=" {{img_url feature_image format='avif' size='md' }}"
+          src=" {{img_url feature_image format='avif' size='lg' }}"
           alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
           decoding="async"
           {{#unless @first}}

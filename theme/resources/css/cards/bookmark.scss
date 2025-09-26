@@ -19,7 +19,8 @@
         @apply mt-3 flex items-center gap-3 text-sm;
     }
     &-icon {
-        @apply my-0 size-6 rounded-xl;
+        // @apply my-0 size-6 rounded-xl;
+        @apply hidden;
     }
     &-author {
         @apply font-normal text-foreground-subtle;

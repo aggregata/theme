@@ -2,3 +2,13 @@
     width: 1rem !important;
     height: 1rem !important;
 }
+
+ins {
+    overflow: hidden;
+}
+
+ins,
+ins div,
+ins div iframe {
+    width: 100% !important;
+}

@@ -11,8 +11,8 @@
                                 {{#if feature_image}}
                                     <img
                                         class="mb-3 border w-full aspect-video rounded-xl"
-                                        srcset="{{img_url feature_image format='avif' size='xs' }} 240w"
-                                        src=" {{img_url feature_image format='avif' size='xs'}}"
+                                        srcset="{{img_url feature_image format='avif' size='sm' }} 240w"
+                                        src=" {{img_url feature_image format='avif' size='sm'}}"
                                         alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
                                         decoding="async"
                                     />
@@ -37,11 +37,11 @@
                     <img
                         class="mb-6 aspect-video w-full rounded-xl border"
                         srcset="
-                            {{img_url feature_image format='avif' size='xs' }} 240w,
-                            {{img_url feature_image format='avif' size='sm' }} 480w,
-                            {{img_url feature_image format='avif' size='md' }} 720w
+                            {{img_url feature_image format='avif' size='sm' }} 240w,
+                            {{img_url feature_image format='avif' size='md' }} 480w,
+                            {{img_url feature_image format='avif' size='lg' }} 720w
                         "
-                        src="{{img_url feature_image format='avif' size='md'}}"
+                        src="{{img_url feature_image format='avif' size='lg'}}"
                         alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
                         decoding="async"
                     />
@@ -71,11 +71,37 @@
                 </div>
             </header>
 
+            {{#unless @member.paid}}
+                <vue-placement class="mx-auto max-w-[45rem] my-18">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9406821308459344" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-9406821308459344"
+                        data-ad-slot="5548510304"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </vue-placement>
+            {{/unless}}
+
             <main class="mt-18">
                 <section class="rich-text">
                     {{content}}
                 </section>
             </main>
+
+            {{#unless @member.paid}}
+                <vue-placement class="mx-auto max-w-[45rem] my-18">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9406821308459344" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-9406821308459344"
+                        data-ad-slot="5548510304"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </vue-placement>
+            {{/unless}}
         </div>
         <aside
             class="px-6 col-start-3 hidden md:block sticky top-0 -mt-12 py-12 max-h-screen overflow-y-auto no-scrollbar">

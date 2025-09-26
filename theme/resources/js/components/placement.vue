@@ -11,14 +11,15 @@ const host = useHost();
             <span>&bullet;</span>
             <a href="#/portal/signup" role="button">Get Aggregata+</a>
         </div>
-        <slot>
-            <div class="placement-fallback">
-                <div class="placement-fallback-inner">
-                    Please consider supporting us by either enabling adverts or
-                    <a href="#/portal/signup">becoming a member</a>
-                </div>
+        <div class="placement-fallback">
+            <div class="placement-fallback-inner">
+                Please consider supporting us by either enabling adverts or
+                <a href="#/portal/signup">becoming a member</a>
             </div>
-        </slot>
+        </div>
+        <div class="placement-container">
+            <slot />
+        </div>
     </div>
 </template>
 
@@ -28,10 +29,13 @@ a {
 }
 
 .placement {
+    height: 100%;
     border-radius: 0.5rem;
     border: 0.0625rem solid var(--border);
+    display: flex;
     padding: 0.75rem;
     position: relative;
+    min-height: 4.25rem;
 
     &-disclaimer {
         background: var(--background);
@@ -49,6 +53,7 @@ a {
     }
 
     &-fallback {
+        align-items: center;
         background-image: repeating-linear-gradient(
             315deg,
             var(--border) 0,
@@ -57,9 +62,14 @@ a {
             transparent 50%
         );
         background-size: 0.5rem 0.5rem;
-        border: 0.0625rem solid var(--border);
         border-radius: 0.25rem;
+        border: 0.0625rem solid var(--border);
+        display: flex;
+        inset: 0.75rem;
+        justify-content: center;
         padding: 0.75rem;
+        position: absolute;
+        z-index: -1;
 
         &-inner {
             background: var(--background);
@@ -67,7 +77,13 @@ a {
             font-size: 0.75rem;
             padding: 0.75rem;
             text-align: center;
+            width: 100%;
         }
+    }
+
+    &-container {
+        width: 100%;
+        height: 100%;
     }
 }
 </style>
