@@ -4,11 +4,13 @@
 }
 
 ins {
+    display: block;
     overflow: hidden;
 }
 
 ins,
 ins div,
 ins div iframe {
+    background: var(--background);
     width: 100% !important;
 }
